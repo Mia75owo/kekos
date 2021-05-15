@@ -2,8 +2,6 @@
 # $< = first dependency
 # $^ = all dependencies
 
-
-# First rule is the one executed when no parameters are fed to the Makefile
 all: run
 
 kernel.bin: kernel-entry.o kernel.o

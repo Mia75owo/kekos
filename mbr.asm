@@ -36,8 +36,6 @@ BEGIN_32BIT:
 ; boot drive variable
 BOOT_DRIVE db 0
 
-; filling the rest with 0
 times 510 - ($-$$) db 0
 
-; end of mbr
 dw 0xaa55

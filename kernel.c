@@ -21,7 +21,7 @@ void printstr(char *text, color c) {
     int offset = get_cursor();
     int i = 0;
     while (text[i] != 0) {
-        if (offset >= MAX_ROWS * MAX_COLS * 2) {
+        if (offset >= MAX_ROWS * MAX_COLS * 2 - 1) {
             offset = scroll_ln(offset);
         }
         if (text[i] == '\n' || get_line_offset() >= MAX_COLS - 1) {
@@ -161,6 +161,7 @@ int main() {
     printstr(text, s());
     printstr(text, s());
     printstr(text, s());
+    set_cursor(scroll_ln(get_cursor()));
     printstr(text2, s());
     return 0;
 }

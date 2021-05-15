@@ -1,4 +1,4 @@
 [bits 32]
-[extern main]
+[extern main] ; load kernel main function
 call main
-jmp $
+jmp $ ; loop
