@@ -17,7 +17,7 @@ color s() {
     return (color)((black << 4) + white);
 }
 
-void printstr(char *text, color c) {
+void print_str(char *text, color c) {
     int offset = get_cursor();
     int i = 0;
     while (text[i] != 0) {
@@ -119,48 +119,31 @@ int get_cursor() {
 
 int main() {
     clear_screen();
-    char text[] = "Hello world\n"; 
-    char text2[] = "kekw\n";
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
-    printstr(text, s());
+    char text[] = "Kari stinkt\n";
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
+    print_str(text, s());
     set_cursor(scroll_ln(get_cursor()));
     printstr(text2, s());
     return 0;

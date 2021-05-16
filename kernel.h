@@ -33,7 +33,7 @@ void clear_screen();
 void port_byte_out(unsigned short port, unsigned char data);
 void set_cursor(int offset);
 void next_line();
-void printstr(char *text, color c);
+void print_str(char *text, color c);
 unsigned char port_byte_in(unsigned short port);
 int get_cursor();
 int get_line();
