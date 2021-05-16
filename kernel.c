@@ -21,7 +21,7 @@ void print_str(char *text, color c) {
     int offset = get_cursor();
     int i = 0;
     while (text[i] != 0) {
-        if (offset >= MAX_ROWS * MAX_COLS * 2 - 1) {
+        if (offset >= MAX_ROWS * MAX_COLS * 2) {
             offset = scroll_ln(offset);
         }
         if (text[i] == '\n' || get_line_offset() >= MAX_COLS - 1) {
@@ -119,7 +119,8 @@ int get_cursor() {
 
 int main() {
     clear_screen();
-    char text[] = "Kari stinkt\n";
+    char text[] = "Test1\n";
+    char text2[] = "Test2\n";
     print_str(text, s());
     print_str(text, s());
     print_str(text, s());
@@ -144,7 +145,6 @@ int main() {
     print_str(text, s());
     print_str(text, s());
     print_str(text, s());
-    set_cursor(scroll_ln(get_cursor()));
-    printstr(text2, s());
+    print_str(text2, s());
     return 0;
 }
