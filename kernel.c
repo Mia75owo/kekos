@@ -1,5 +1,7 @@
 #include "./kernel.h"
 
+void __stack_chk_fail(void) {}
+
 void clear_screen() {
     for (int i = 0; i <= MAX_ROWS * MAX_COLS; i++) {
         unsigned char *vidmem = (unsigned char *) VIDEO_ADDRESS;
